@@ -27,6 +27,7 @@ To run the app, use the following command:
 ```bash
 streamlit run myapp.py
 ```
+OR you can access directly to the web application hosted on Streamlit Community Cloud : [here](https://nearsvsloada.streamlit.app/)
 
 ## Built With
 - **Python**
