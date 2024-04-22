@@ -202,7 +202,7 @@ with col[1]:
                 st.markdown(f"**F1-score** =  {F1_score * 100:.2f}%")
 
         # All
-        st.write(f"#### <span style='color:{color_dict["Tous"]}'>{"Tous"}</span>", unsafe_allow_html=True)
+        st.write(f"#### <span style='color:{color_dict['Tous']}'>{'Tous'}</span>", unsafe_allow_html=True)
         with st.expander('Precision/ F1-Score', expanded=True):
             st.markdown(f"**Precision**  = {all_precision / len(others_activities) * 100:.2f}%")
             st.markdown(f"**F1-score** =  {all_f1score / len(others_activities) * 100:.2f}%")
