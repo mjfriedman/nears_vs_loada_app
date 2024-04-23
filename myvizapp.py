@@ -287,7 +287,7 @@ def calculate_predictions(nears_df, loada_df, tol):
         else:
             bad += 1
 
-    total = good + middle + bad
+    total = good + middle + bad + 1e-10
 
     # Percentages
     good_pct = good / total * 100
@@ -299,9 +299,9 @@ def calculate_predictions(nears_df, loada_df, tol):
 
 def generate_pie_chart_data(nears_df, loada_df, tol=10):
     good, middle, bad = calculate_predictions(nears_df, loada_df, tol)
-    total = good + middle + bad
+    total = good + middle + bad + 1e-10
     return pd.DataFrame({'Prediction': ['Bonne', 'Moyenne', 'Mauvaise'],
-                         'Percentage': [good / total * 100, middle / total * 100, bad / total * 100]})
+                         'Percentage': [(good / total) * 100, (middle / total) * 100, (bad / total) * 100]})
 
 
 def plot_histogram_and_pie_chart():
