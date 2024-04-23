@@ -53,8 +53,8 @@ show_nears_data = True
 # Section for the date inputs
 st.sidebar.header("Plage de dates")
 start_date = st.sidebar.date_input("Début", value=min(nears_data['start']), min_value=min(nears_data['start']),
-                                   max_value=max(nears_data['start']) - pd.Timedelta(days=1))
-end_date = st.sidebar.date_input("Fin", value=min(nears_data['end'] + pd.Timedelta(days=2)),
+                                   max_value=max(nears_data['end']) - pd.Timedelta(days=1))
+end_date = st.sidebar.date_input("Fin", value=pd.to_datetime(start_date + pd.Timedelta(days=1)),
                                  min_value=pd.to_datetime(start_date + pd.Timedelta(days=1)),
                                  max_value=max(nears_data['end']))
 st.sidebar.markdown("---")
